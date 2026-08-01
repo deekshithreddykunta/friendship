@@ -1664,3 +1664,11 @@ drop-shadow(
         margin:25px auto 0;
     }
 }
+/* Desktop/Laptop Friendship Button */
+#tieBtn{
+    width: 220px;
+    max-width: 220px;
+    height: 55px;
+    padding: 12px 20px;
+    display: inline-block;
+}
