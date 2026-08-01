@@ -187,6 +187,7 @@ bandBtn.onclick = function () {
     letter.style.display = "none";
 
     friendship.style.display = "flex";
+    friendship.style.flexDirection="column";
 
     friendship.scrollIntoView({
         behavior: "smooth"
