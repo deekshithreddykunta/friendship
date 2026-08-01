@@ -1,0 +1,1610 @@
+/* ===================================
+   FRIENDSHIP DAY WEBSITE
+   STYLE.CSS PART 1
+=================================== */
+
+
+/* GOOGLE FONT */
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Poppins:wght@300;400;600;700&display=swap');
+
+
+
+/* =========================
+   RESET
+========================= */
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#050816;
+
+    color:white;
+
+    overflow-x:hidden;
+
+}
+
+
+
+/* =========================
+   BACKGROUND
+========================= */
+
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+width:100%;
+
+height:100%;
+
+background:
+
+radial-gradient(circle at top,#182848,#050816 70%);
+
+z-index:-2;
+
+}
+
+
+
+/* =========================
+   STARS
+========================= */
+
+
+.stars{
+
+position:fixed;
+
+width:100%;
+
+height:100%;
+
+overflow:hidden;
+
+z-index:-1;
+
+}
+
+
+
+.stars::before,
+.stars::after{
+
+
+content:"";
+
+position:absolute;
+
+width:3px;
+
+height:3px;
+
+background:white;
+
+border-radius:50%;
+
+
+box-shadow:
+
+20vw 10vh white,
+40vw 20vh white,
+60vw 5vh white,
+80vw 30vh white,
+10vw 70vh white,
+30vw 80vh white,
+70vw 60vh white,
+90vw 90vh white,
+50vw 50vh white;
+
+
+animation:stars 3s infinite alternate;
+
+
+}
+
+
+
+@keyframes stars{
+
+
+from{
+
+opacity:.3;
+
+}
+
+
+to{
+
+opacity:1;
+
+}
+
+
+}
+
+
+
+
+/* =========================
+   MUSIC BUTTON
+========================= */
+
+
+#musicBtn{
+
+
+position:fixed;
+
+top:20px;
+
+right:20px;
+
+z-index:20;
+
+
+width:55px;
+
+height:55px;
+
+
+border-radius:50%;
+
+border:none;
+
+
+font-size:22px;
+
+
+background:#ff4d88;
+
+color:white;
+
+
+cursor:pointer;
+
+
+box-shadow:
+
+0 0 20px rgba(255,77,136,.7);
+
+
+}
+
+
+
+/* =========================
+   INTRO SECTION
+========================= */
+
+
+#intro{
+
+
+height:100vh;
+
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+
+text-align:center;
+
+
+padding:20px;
+
+
+}
+
+
+
+#intro h2{
+
+
+font-size:28px;
+
+font-weight:300;
+
+
+}
+
+
+
+#intro h1{
+
+
+font-family:'Dancing Script',cursive;
+
+
+font-size:70px;
+
+
+margin:15px 0;
+
+
+color:#ff9fcf;
+
+
+}
+
+
+
+#intro p{
+
+
+font-size:18px;
+
+max-width:600px;
+
+
+}
+
+
+
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+
+button{
+
+
+margin-top:35px;
+
+
+padding:15px 40px;
+
+
+border-radius:40px;
+
+
+border:none;
+
+
+font-size:18px;
+
+
+cursor:pointer;
+
+
+background:
+
+linear-gradient(45deg,#ff4d88,#ff85b3);
+
+
+color:white;
+
+
+transition:.4s;
+
+
+}
+
+
+
+button:hover{
+
+
+transform:translateY(-5px);
+
+
+box-shadow:
+
+0 10px 30px rgba(255,77,136,.5);
+
+
+}
+
+
+
+
+
+/* =========================
+   ENVELOPE
+========================= */
+
+
+#envelope{
+
+
+width:320px;
+
+height:220px;
+
+
+position:relative;
+
+
+margin-top:50px;
+
+
+cursor:pointer;
+
+
+perspective:1000px;
+
+
+}
+
+
+
+
+
+#envelope .back{
+
+
+position:absolute;
+
+width:100%;
+
+height:100%;
+
+
+background:#ffb3c6;
+
+
+border-radius:10px;
+
+
+
+}
+
+
+
+
+
+#envelope .front{
+
+
+position:absolute;
+
+
+bottom:0;
+
+
+width:100%;
+
+
+height:65%;
+
+
+background:#ff85a1;
+
+
+clip-path:
+
+polygon(
+
+0 0,
+
+50% 70%,
+
+100% 0,
+
+100% 100%,
+
+0 100%
+
+);
+
+
+}
+
+
+
+
+#envelope .flap{
+
+
+position:absolute;
+
+
+top:0;
+
+
+width:100%;
+
+
+height:60%;
+
+
+background:#ffc2d1;
+
+
+
+clip-path:
+
+polygon(
+
+0 100%,
+
+50% 0,
+
+100% 100%
+
+);
+
+
+transform-origin:top;
+
+
+transition:1s;
+
+
+}
+
+
+
+
+#envelope .paper{
+
+
+position:absolute;
+
+
+width:80%;
+
+
+height:75%;
+
+
+left:10%;
+
+
+top:15%;
+
+
+background:white;
+
+
+color:#ff4d88;
+
+
+border-radius:8px;
+
+
+display:flex;
+
+
+align-items:center;
+
+
+justify-content:center;
+
+
+transition:1s;
+
+
+}
+
+
+
+.paper h3{
+
+
+font-family:'Dancing Script',cursive;
+
+
+font-size:30px;
+
+
+}
+
+
+
+
+#envelope .seal{
+
+
+position:absolute;
+
+
+left:50%;
+
+
+top:50%;
+
+
+transform:translate(-50%,-50%);
+
+
+background:#ff3366;
+
+
+width:55px;
+
+
+height:55px;
+
+
+border-radius:50%;
+
+
+display:flex;
+
+
+justify-content:center;
+
+
+align-items:center;
+
+
+font-size:25px;
+
+
+}
+
+
+
+
+
+/* OPEN ANIMATION */
+
+
+.open .flap{
+
+
+transform:rotateX(180deg);
+
+
+}
+
+
+
+.open .paper{
+
+
+transform:translateY(-130px);
+
+
+}
+
+
+
+/* =========================
+   LETTER SECTION
+========================= */
+
+
+#letter{
+
+
+min-height:100vh;
+
+
+display:none;
+
+
+justify-content:center;
+
+
+align-items:center;
+
+
+padding:40px;
+
+
+}
+
+
+
+.letter-box{
+
+
+background:#fff8f0;
+
+
+color:#333;
+
+
+max-width:750px;
+
+
+padding:50px;
+
+
+border-radius:25px;
+
+
+text-align:center;
+
+
+box-shadow:
+
+0 20px 50px rgba(0,0,0,.5);
+
+
+}
+
+
+
+
+.letter-box h1{
+
+
+font-family:'Dancing Script',cursive;
+
+
+font-size:55px;
+
+
+color:#ff4d88;
+
+
+}
+
+
+
+#message{
+
+
+font-size:20px;
+
+
+line-height:2;
+
+
+margin-top:25px;
+
+
+}
+/* ===================================
+   STYLE.CSS PART 2
+=================================== */
+
+
+/* =========================
+   MEMORY SECTION
+========================= */
+
+
+#memories{
+
+min-height:100vh;
+
+display:none;
+
+text-align:center;
+
+padding:80px 20px;
+
+}
+
+
+
+#memories h1{
+
+font-family:'Dancing Script',cursive;
+
+font-size:60px;
+
+color:#ff9fcf;
+
+}
+
+
+
+.gallery {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 35px;
+
+    width:100%;
+
+    padding:40px 20px;
+
+}
+
+
+.gallery img,
+.memory-video {
+
+    width:70%;
+
+    max-width:600px;
+
+    height:400px;
+
+    object-fit:cover;
+
+    border-radius:25px;
+
+    border:8px solid white;
+
+    box-shadow:0 0 25px rgba(255,105,180,0.6);
+
+    transition:0.5s;
+
+}
+
+
+.gallery img:hover,
+.memory-video:hover {
+
+    transform:scale(1.05);
+
+}
+
+
+
+
+/* =========================
+ FRIENDSHIP SECTION
+========================= */
+
+#friendship{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:70px 20px;
+}
+
+#friendship h1{
+    font-size:48px;
+    margin-bottom:10px;
+}
+
+#friendship p{
+    font-size:24px;
+    margin-bottom:30px;
+}
+
+.friend-video{
+    width:90%;
+    max-width:850px;
+    margin:25px auto;
+}
+
+.friend-video video{
+    width:100%;
+    border-radius:20px;
+    display:block;
+    box-shadow:0 0 30px rgba(255,105,180,.45);
+}
+
+#tieBtn{
+    margin-top:35px;
+    padding:16px 40px;
+    font-size:20px;
+    border:none;
+    border-radius:40px;
+    cursor:pointer;
+    background:linear-gradient(45deg,#ff4d88,#ff7eb3);
+    color:white;
+    box-shadow:0 0 20px rgba(255,105,180,.6);
+    transition:.3s;
+}
+
+#tieBtn:hover{
+    transform:scale(1.08);
+}
+
+
+
+/* =========================
+ FRIENDS ANIMATION AREA
+========================= */
+
+
+.scene{
+
+
+height:100px;
+
+
+position:relative;
+
+
+display:flex;
+
+
+justify-content:center;
+
+
+align-items:flex-end;
+
+
+gap:160px;
+
+
+margin-top:160px;
+
+
+}
+
+#friendship video {
+    width: 800px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+    margin: 2px auto 10px;   /* reduce bottom space */
+    box-shadow: 0 0 25px rgba(255,105,180,0.5);
+}
+}
+
+
+
+/* PERSON */
+
+
+.person{
+
+
+position:relative;
+
+
+width:120px;
+
+
+height:260px;
+
+
+animation:
+
+floatPerson 3s infinite ease-in-out;
+
+
+}
+
+
+
+@keyframes floatPerson{
+
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+
+}
+
+
+
+
+
+.head{
+
+
+width:80px;
+
+
+height:80px;
+
+
+background:#ffd6b3;
+
+
+border-radius:50%;
+
+
+position:absolute;
+
+
+top:0;
+
+
+left:20px;
+
+
+}
+
+
+
+.body{
+
+
+position:absolute;
+
+
+top:80px;
+
+
+left:30px;
+
+
+width:60px;
+
+
+height:100px;
+
+
+background:#4d96ff;
+
+
+border-radius:20px;
+
+
+}
+
+
+
+.friend-two .body{
+
+
+background:#ff6b9d;
+
+
+}
+
+
+
+
+
+.arm{
+
+
+position:absolute;
+
+
+width:18px;
+
+
+height:90px;
+
+
+background:#ffd6b3;
+
+
+border-radius:20px;
+
+
+top:90px;
+
+
+transform-origin:top;
+
+
+}
+
+
+
+
+.arm.left{
+
+
+left:10px;
+
+
+transform:rotate(25deg);
+
+
+}
+
+
+
+
+.arm.right{
+
+
+right:10px;
+
+
+transform:rotate(-25deg);
+
+
+}
+
+
+
+
+
+.hand{
+
+
+position:absolute;
+
+
+width:35px;
+
+
+height:35px;
+
+
+background:#ffd6b3;
+
+
+border-radius:50%;
+
+
+top:160px;
+
+
+left:42px;
+
+
+}
+
+
+
+
+/* =========================
+ FRIENDSHIP BAND
+========================= */
+
+
+#band{
+
+
+position:absolute;
+
+
+font-size:45px;
+
+
+opacity:0;
+
+
+transform:scale(0);
+
+
+transition:1s;
+
+
+}
+
+
+
+.tie-animation #band{
+
+
+opacity:1;
+
+
+transform:scale(1.2);
+
+
+animation:
+
+bandGlow 1s infinite alternate;
+
+
+}
+
+
+
+@keyframes bandGlow{
+
+
+from{
+
+filter:drop-shadow(0 0 5px pink);
+
+}
+
+
+to{
+
+filter:drop-shadow(0 0 25px hotpink);
+
+}
+
+
+}
+
+
+
+
+
+/* =========================
+ FINAL SECTION
+========================= */
+
+
+#final{
+
+
+min-height:100vh;
+
+
+display:none;
+
+
+justify-content:center;
+
+
+align-items:center;
+
+
+text-align:center;
+
+
+padding:30px;
+
+
+}
+
+
+
+
+
+.final-box h1{
+
+
+font-family:'Dancing Script',cursive;
+
+
+font-size:80px;
+
+
+color:#ff9fcf;
+
+
+}
+
+
+
+.heart{
+
+
+font-size:80px;
+
+
+animation:
+
+heartbeat 1s infinite;
+
+
+}
+
+
+
+@keyframes heartbeat{
+
+
+50%{
+
+transform:scale(1.3);
+
+}
+
+
+}
+
+
+
+
+.infinity{
+
+
+font-size:100px;
+
+
+color:#ff4d88;
+
+
+}
+
+
+
+
+
+.final-box p{
+
+
+font-size:22px;
+
+
+line-height:2;
+
+
+}
+
+
+
+
+
+/* =========================
+ FLOATING HEARTS
+========================= */
+
+
+.heart-float{
+
+
+position:fixed;
+
+
+bottom:-50px;
+
+
+font-size:25px;
+
+
+animation:
+
+rise 8s linear infinite;
+
+
+}
+
+
+
+@keyframes rise{
+
+
+0%{
+
+
+transform:
+
+translateY(0)
+
+rotate(0);
+
+
+opacity:1;
+
+
+}
+
+
+100%{
+
+
+transform:
+
+translateY(-120vh)
+
+rotate(360deg);
+
+
+opacity:0;
+
+
+}
+
+
+}
+
+
+
+
+/* =========================
+ CONFETTI
+========================= */
+
+
+.confetti-piece{
+
+
+position:absolute;
+
+
+width:10px;
+
+
+height:20px;
+
+
+animation:
+
+fall 3s linear forwards;
+
+
+}
+
+
+
+@keyframes fall{
+
+
+from{
+
+
+transform:
+
+translateY(-100px)
+
+rotate(0);
+
+
+}
+
+
+
+to{
+
+
+transform:
+
+translateY(100vh)
+
+rotate(720deg);
+
+
+opacity:0;
+
+
+}
+
+
+}
+
+
+
+
+
+/* =========================
+ MOBILE DESIGN
+========================= */
+
+
+@media(max-width:700px){
+
+
+
+#intro h1{
+
+font-size:45px;
+
+}
+
+
+
+#envelope{
+
+
+width:260px;
+
+
+height:180px;
+
+
+}
+
+
+
+.letter-box{
+
+
+padding:30px;
+
+
+}
+
+
+
+.letter-box h1{
+
+
+font-size:40px;
+
+
+}
+
+
+
+.scene{
+
+
+gap:50px;
+
+
+transform:scale(.8);
+
+
+}
+
+
+
+#friendship h1{
+
+
+font-size:45px;
+
+
+}
+
+
+
+.final-box h1{
+
+
+font-size:55px;
+
+
+}
+
+
+
+.gallery{
+
+
+grid-template-columns:
+
+repeat(1,1fr);
+
+
+}
+
+
+
+}
+body{
+background:
+linear-gradient(
+135deg,
+#05001a,
+#240046,
+#ff006e
+);
+}
+
+
+/* glowing headings */
+
+h1,h2{
+text-shadow:
+0 0 10px #ff4d88,
+0 0 30px #ff4d88;
+}
+
+
+
+/* envelope floating */
+
+#envelope{
+
+animation:
+float 3s infinite ease-in-out;
+
+box-shadow:
+0 0 40px pink;
+
+}
+
+
+@keyframes float{
+
+50%{
+
+transform:
+translateY(-20px);
+
+}
+
+}
+
+
+
+/* glass buttons */
+
+
+button{
+
+background:
+linear-gradient(
+45deg,
+#ff006e,
+#ff8fab
+);
+
+box-shadow:
+0 0 20px #ff006e;
+
+}
+
+
+
+/* photo cards */
+
+.gallery img{
+
+border:
+8px solid white;
+
+box-shadow:
+0 20px 40px black;
+
+transform:
+rotate(-3deg);
+
+}
+
+
+
+.gallery img:hover{
+
+transform:
+scale(1.15)
+rotate(3deg);
+
+}
+
+
+
+/* heart glow */
+
+.heart-float{
+
+filter:
+drop-shadow(
+0 0 10px red
+);
+
+}
+.memories {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+
+.memories h2 {
+    font-size: 50px;
+    color: #ff7ac8;
+    margin-bottom: 40px;
+    font-family: cursive;
+}
+
+
+.memory-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+
+.memory-card {
+    background: white;
+    padding: 12px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255,100,180,0.5);
+    transform: rotate(-2deg);
+}
+
+
+.memory-card:nth-child(even){
+    transform: rotate(2deg);
+}
+
+
+.memory-card img,
+.memory-card video {
+
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 15px;
+}
