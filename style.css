@@ -766,55 +766,52 @@ color:#ff9fcf;
  FRIENDSHIP SECTION
 ========================= */
 
+
 #friendship{
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:70px 20px;
+
+
+min-height:100vh;
+
+
+display:none;
+
+
+text-align:center;
+
+
+padding:60px 20px;
+
+
 }
+
+
+
 
 #friendship h1{
-    font-size:48px;
-    margin-bottom:10px;
+
+
+font-family:'Dancing Script',cursive;
+
+
+font-size:65px;
+
+
+color:#ff9fcf;
+
+
 }
+
+
 
 #friendship p{
-    font-size:24px;
-    margin-bottom:30px;
+
+
+font-size:20px;
+
+
 }
 
-.friend-video{
-    width:90%;
-    max-width:850px;
-    margin:25px auto;
-}
 
-.friend-video video{
-    width:100%;
-    border-radius:20px;
-    display:block;
-    box-shadow:0 0 30px rgba(255,105,180,.45);
-}
-
-#tieBtn{
-    margin-top:35px;
-    padding:16px 40px;
-    font-size:20px;
-    border:none;
-    border-radius:40px;
-    cursor:pointer;
-    background:linear-gradient(45deg,#ff4d88,#ff7eb3);
-    color:white;
-    box-shadow:0 0 20px rgba(255,105,180,.6);
-    transition:.3s;
-}
-
-#tieBtn:hover{
-    transform:scale(1.08);
-}
 
 
 
@@ -823,31 +820,7 @@ color:#ff9fcf;
 ========================= */
 
 
-.scene{
 
-
-height:100px;
-
-
-position:relative;
-
-
-display:flex;
-
-
-justify-content:center;
-
-
-align-items:flex-end;
-
-
-gap:160px;
-
-
-margin-top:160px;
-
-
-}
 
 #friendship video {
     width: 800px;
@@ -858,7 +831,7 @@ margin-top:160px;
     margin: 2px auto 10px;   /* reduce bottom space */
     box-shadow: 0 0 25px rgba(255,105,180,0.5);
 }
-}
+
 
 
 
@@ -1607,4 +1580,36 @@ drop-shadow(
     height: 280px;
     object-fit: cover;
     border-radius: 15px;
+}
+/* Mobile Fix - Friendship Band Page Only */
+@media (max-width: 700px) {
+
+    #friendship {
+        padding: 20px 15px;
+        min-height: 100vh;
+    }
+
+    #friendship h1 {
+        font-size: 38px;
+    }
+
+    #friendship p {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    #friendship video {
+        width: 100%;
+        max-width: 340px;
+        height: auto;
+        display: block;
+        margin: 20px auto;
+        border-radius: 15px;
+    }
+
+    #tieBtn {
+        width: 90%;
+        max-width: 280px;
+        margin-top: 20px;
+    }
 }
